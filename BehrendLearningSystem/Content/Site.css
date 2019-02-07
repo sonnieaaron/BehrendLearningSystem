@@ -1,0 +1,193 @@
+﻿body {
+    background-color: #e0e0e0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+.content {
+    flex: 1;
+    /*min-height: calc(100vh - 40px);*/
+}
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+a.navbar-brand{
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.footer {
+    background-color: #bdbdbd;
+    min-height: 120px;
+    max-height: 120px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.header {
+    width: 100%;
+    max-width: 100%;
+    background-color: #002171;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: unset;
+    margin-left: unset;
+    /*width: 1400px;*/
+    max-width: 100%;
+}
+
+.navbar{
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.logo {
+    height: 75px;
+    width: 230px;
+}
+.padfoot{
+    padding-top: 20px;
+}
+
+#site{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.site-content{
+    flex: 1;
+}
+
+/*#dropdown-parent-Courses{
+    font-size: 20px;
+}*/
+
+.bls{
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+a {
+    color: white;
+}
+
+a :hover{
+    color: white;
+}
+
+#dropdown-dest-Courses {
+    background-color: #002171;
+    position: fixed;
+    padding-top: 220px;
+    padding-left: 20px;
+    width: 334px;
+    display: none;
+    font-size: 20px;
+    z-index: 1;
+}
+
+#dropdown-dest-Courses a:hover {
+    background-color: #eeeeee;
+}
+
+#profilepic {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: white;
+}
+
+#hidden {
+    display: none;
+}
+
+.whitetext{
+    color: white;
+}
+
+.logon {
+    padding-top: 100px;
+    padding-left: 190px;
+    display: inline-block;
+    height: 400px;
+    width: 600px;
+    background-color: #002171;
+    margin-left: 600px;
+    margin-top: 150px;
+}
+
+#courseModules{
+    overflow-y: auto;
+    vertical-align: top;
+    width: 22%;
+    height: 700px;
+    display: inline-block;
+}
+
+#moduleArea{
+    overflow-y: scroll;
+    width: 77%;
+    height: 700px;
+    display: inline-block;
+}
+
+.moduleborder {
+    background-color: #0d47a1;
+    border: solid;
+    border-color: white;
+    height: 90px;
+    font-size: 16px;
+    vertical-align: central;
+}
+
+#courselink{
+    color: black;
+}
+
+.topmarginmodule{
+    padding-top: 26px;
+}
+
+.profileheader{
+    font-size: 25px;
+}
+
+.glyphicon-chevron-down{
+    font-size: 30px;
+}

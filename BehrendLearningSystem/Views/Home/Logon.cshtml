@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Logon";
+}
+@*<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>*@
+
+@*<p>Login using user credentials</p>*@
+
+<div class="row">
+    <div class="logon">
+        <div class="row">
+            <label class="whitetext">Username:</label>
+            <input id="un" type="text" value="" required maxlength="7"/>
+        </div>
+        <div class="row">
+            <label class="whitetext">Password:</label>
+            <input id="pw" type="password" required maxlength="32" value="" />
+        </div>
+        <div class="row">
+            <button id="loginbtn" style="width: 200px; margin-left: 10px;">Login</button>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <text class="whitetext">Don't have an account?</text>
+            @*<div>@Html.ActionLink("Register", "Register", "Home", new { area = "" }, new { @class = "navbar-brand" })</div>*@
+            <label style="color: white;" onclick="GoToRegister()">Register</label>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function GoToRegister() {
+        location.href = 'Register';
+    }
+
+
+
+    $("#loginbtn").click(function () {
+        var un = $("#un").val();
+        var pw = $("#pw").val();
+
+        var validUserName = alphanumeric(un);
+        if (!validUserName || un.length < 4) {
+            alert('Invalid Username');
+        }
+        else if (un != "" && pw != "") {
+
+            $.ajax({
+                url: "Logon",
+                type: 'Post',
+                async: false,
+                data: {
+                    username: un,
+                    password: pw
+                },
+                success: function () {
+                    location.href = 'Index';
+                }
+            });
+
+        }
+        else {
+            alert("Please enter a valid username and password!");
+        }
+    })
+
+    function alphanumeric(inputtxt) {
+        var letters = /^[0-9a-zA-Z]+$/;
+        if (letters.test(inputtxt)) {
+            
+            return true;
+        } else {
+            
+            return false;
+        }
+    }
+
+
+</script>

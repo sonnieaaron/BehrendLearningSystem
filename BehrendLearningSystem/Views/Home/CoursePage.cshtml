@@ -1,0 +1,33 @@
+﻿@model BehrendLearningSystem.Models.Course
+@{
+    ViewBag.Title = "Course";
+}
+
+@if (Model.courseID == "default")
+{
+    <h2>Courses</h2>
+    <h3>Here is where we would have a more detailed view of the available courses. </h3>
+}
+else
+{
+    <div id="courseModules">
+        <div class="moduleborder">
+            <div class="topmarginmodule">
+                <label class="whitetext">@Model.courseID Modules:</label>
+            </div>
+        </div>
+        @foreach(var item in Model.modules)
+        {
+        <div class="moduleborder">
+            @*<img class="chevron" src="~/Images/Chevron.png" />*@
+            <div class="topmarginmodule">
+                <span class="glyphicon glyphicon-chevron-right whitetext"></span>
+                <label class="whitetext">@item.moduleName</label>
+            </div>
+        </div>
+        }
+    </div>
+    <div id="moduleArea">
+        @Html.Partial("Module")
+    </div>
+}
